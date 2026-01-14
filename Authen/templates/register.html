@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}  
+
+<body class="bg-[#161d25]  font-sans text-[#6e879f]">
+
+    <div class="w-full flex flex-col items-center text-center pt-10">
+
+        <h1 class="text-2xl font-semibold mb-6">Ro'yxatdan o'tish</h1>
+
+        <div class="flex items-center w-[380px] mb-3">
+            <span class="bg-[#333d4d] border border-[#313842] px-3 py-3 rounded-l text-sm font-semibold">
+                <i class="fa fa-envelope"></i>
+            </span>
+            <input
+                type="email"
+                placeholder="Email Manzil"
+                class="w-full  h-11 bg-[#28313e] border border-[#313842] rounded-r px-3 text-sm outline-none"
+            >
+        </div>
+
+     
+        <div class="flex items-center w-[380px] mb-3">
+            <span class="bg-[#333d4d] border border-[#313842] px-3 py-3 rounded-l text-sm font-semibold">
+                <i class="fa fa-user"></i>
+            </span>
+            <input type="text" placeholder="Login" class="w-full h-11 bg-[#28313e] border border-[#313842] rounded-r px-3 text-sm outline-none">
+        </div>
+
+        <div class="flex items-center w-[380px] mb-3">
+            <span class="bg-[#333d4d] border border-[#313842] px-3 py-3 rounded-l text-sm font-semibold">
+                <i class="fa fa-lock"></i>
+            </span>
+            <input
+                type="password"
+                placeholder="Parol"
+                class="w-full  h-11 bg-[#28313e] border border-[#313842] rounded-r px-3 text-sm outline-none">
+        </div>
+
+        <div class="flex items-center w-[380px] mb-4">
+            <span class="bg-[#333d4d] border border-[#313842] px-3 py-3 rounded-l text-sm font-semibold">
+                <i class="fa fa-legal"></i>
+            </span>
+            <input
+                type="password"
+                placeholder="Parolni tasdiqlash"
+                class="w-full  h-11 bg-[#28313e] border border-[#313842] rounded-r px-3 text-sm outline-none"
+            >
+        </div>
+
+        <div class="flex items-center gap-2 mb-4">
+            <input type="checkbox" class="w-[13px] h-[13px]">
+            <em class="text-sm">
+                <a href="#" class="text-[#a5bbdc] hover:underline">foydalanish shartlari</a>ga roziman
+            </em>
+        </div>
+
+
+        <button class="w-[450px] h-[34px] bg-[#638b34] border border-[#638b34] rounded text-[#a5bbdc] text-base mb-2 hover:opacity-90">
+            DAVOM ETISH
+        </button>
+
+
+        <p class="text-sm text-gray-400 mt-3">
+            Allaqachon ochilgan akauntingiz mavjudmi?
+            <a href="#" class="text-blue-500 hover:underline">Kirish</a>
+        </p>
+
+
+        <div class="flex items-center w-full justify-center my-8">
+            <div class="h-[3px] w-[150px] bg-gray-700"></div>
+            <span class="mx-4 text-gray-400 text-sm">YOKI</span>
+            <div class="h-[3px] w-[150px] bg-gray-700"></div>
+        </div>
+
+        <div class="flex gap-5 mb-24">
+
+            <a href="#" class="w-[180px] h-[35px] bg-[#4285f4] rounded flex items-center justify-center text-white gap-2">
+                <i class="fa-brands fa-google"></i> GOOGLE
+            </a>
+
+            <a href="#" class="w-[180px] h-[35px] bg-[#2aabee] rounded flex items-center justify-center text-white gap-2">
+                <i class="fa-brands fa-telegram"></i> TELEGRAM
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+{% endblock %}

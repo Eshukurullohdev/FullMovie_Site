@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{%  block content %}
+<style>
+    input {
+        border: 1px solid #313842;
+    }
+    span {
+        padding: 10px 10px 10px 10px;
+        
+    }
+    button {
+        border:1px solid #313842 ;   
+    }
+    
+</style>
+<body>
+    <div class="wrapper w-[100%] h-[1000px] flex items-center justify-center bg-[#161d25]  text-[#6e879f] ">
+        <div class="kvadrat w-[852px] h-[600px] mt-[150px]  bg-[#222933] rounded-[5px] ">
+            <div class="chiz w-[3px] h-[40px] bg-[#9b59b6] relative top-[35px]"></div>
+            <h1 class="text-[22px] ml-[30px]">BIZ BILAN ALOQA </h1>
+            <div class="yozuvlar w-[852px] h-[108px] bg-[#24303d] mt-[20px] ">
+                <div class="ora ml-[35px] mt-[15px]">
+                    <h4 class="pt-[15px] text-[12px] font-bold ">Assalomu alaykum, saytimizning hurmatli mehmoni!</h4>
+                    <p class="mt-[15px] text-[12px]">Quyidagi aloqa formasidan foydalanib, bizga istalgan mavzuda xabar
+                        yuborishingiz mumkin. 24 soat ichida murojaatingizni ko'rib chiqib sizga <br> javob yozamiz.
+                        Saytimizni tanlaganingiz uchun tashakkur!</p>
+
+
+
+                </div>
+
+            </div>
+            <div class="inputlar flex-col flex items-center justify-center mt-[40px] gap-[13px] ">
+                <div class="input1  flex ">
+                    <div class="kvad w-[39px] h-[34px] bg-[#333d4d] flex items-center justify-center rounded-[2px] ">
+                         <i class="fa fa-user"></i>
+                    </div>
+                    <input class="w-[733px] h-[34px] bg-[#28313e] text-[#a5bbdc] text-[13px]  " type="text" placeholder="   Ismingiz">
+                </div>
+                     <div class="input2  flex ">
+                    <div class="kvad w-[39px] h-[34px] bg-[#333d4d] flex items-center justify-center rounded-[2px] ">
+                         <i class="fa fa-at"></i>
+                    </div>
+                    <input class="w-[733px] h-[34px] bg-[#28313e] text-[#a5bbdc] text-[13px] " type="text" placeholder="   E-mail, telefon raqam yoki telegram havola">
+                </div>
+                     <div class="input3  flex ">
+                    <div class="kvad w-[39px] h-[34px] bg-[#333d4d] flex items-center justify-center rounded-[2px] ">
+                       <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <select class="w-[733px] h-[34px] bg-[#28313e] text-[#8893a1] px-[10px]  text-[13px]" name="recip">
+                                        
+                                        <option value="tech">  Texnik bo'lim</option>
+                                        <option value="movie">  Filmlar bo'limi</option>
+                                    </select>
+                </div>
+                     <div class="input4  flex ">
+                    <div class="kvad w-[39px] h-[34px] bg-[#333d4d] flex items-center justify-center rounded-[2px] ">
+                      <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                    <input class="w-[733px] h-[34px] bg-[#28313e] text-[#a5bbdc] text-[13px] " type="text" placeholder="   Xabar mavzusi">
+                </div>
+                 <div class="input5  flex ">
+                    <div class="kvad w-[39px] h-[101px] bg-[#333d4d] flex items-center justify-center rounded-[2px] ">
+                     <i class="fa-regular fa-pen-to-square"></i>
+                    </div>
+                    <textarea class="w-[733px] h-[101px]  bg-[#28313e] text-[#a5bbdc] text-[13px] " name="" id="" placeholder="    Xabar..."></textarea>
+                </div>
+           
+                <button onclick="" class=" w-[772px] h-[34px] bg-[#232f3d] text-[#99b1d4] text-[13px] mt-[9px] ">YUBORISH</button>
+           
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+</body>
+
+{% endblock %}

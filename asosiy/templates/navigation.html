@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+      <div style="border-color: 1px solid #313842"
+            class="navbar pt-[15px] pb-[15px] mx-auto flex justify-center items-center bg-[#222933]">
+            <a href="{% url 'home' %}">
+                <img src="https://uzmovi.tv/images/logo.gif" alt="" width="290px" height="80px">
+            </a>
+            <nav class="ml-[200px]">
+                <ul style="text-transform: uppercase;color:#a5bbdc;"
+                    class="items-center flex text-white space-x-6 font-semibold">
+                    <li><a href="{% url 'home' %}">Bosh sahifa</a></li>
+                    <li id="kinolar-toggle"><a href="#">Kinolar</a></li>
+                    <li><a href="#">Seriallar</a></li>
+                    <li id="janr"><a href="#">Janri</a></li>
+                    <li id="yil"><a href="#">Yil</a></li>
+                    <li id="davlat"><a href="#">Mamlakat</a></li>
+                    <li><a href="#">Kino yangiliklari</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        </div>
+
+    <div id="kinolar-panel"
+         class="absolute left-1/2 -translate-x-1/2 mt-2 hidden w-full max-w-[1190px] bg-transparent z-40">
+      <div class="relative">
+        <div class="bg-[#161d25] rounded-md shadow-xl border border-[#24303a] px-6 py-5">
+          <div class="flex gap-4 justify-between items-center">
+            <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">
+              Tarjima kinolar
+            </button>
+            <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">
+              Premyeralar
+            </button>
+            <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">
+              Hind kinolari
+            </button>
+            <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">
+              Multfilm
+            </button>
+            <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">
+              Kino yangiliklar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   <div id="eps"
+     class="absolute left-1/2 -translate-x-1/2 mt-2 hidden w-full max-w-[1190px] bg-transparent z-40">
+  <div class="relative">
+    <div class="bg-[#161d25] rounded-md shadow-xl border border-[#24303a] px-6 py-5">
+      <div class="flex gap-4 justify-between items-center mb-2">
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Jangari</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Drama</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Komediya</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Melodrama</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Sarguzasht</button>
+</div>
+<div class="flex gap-4 justify-between items-center mb-2">
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Qo‘rqinchli</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Tarixiy</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Klassika</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Fantastika</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Hayotiy</button>
+</div>
+<div class="flex gap-4 justify-between items-center mb-2">
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Triller</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Detektiv</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Hujjatli film</button>
+
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Anime</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Kriminal</button>
+</div>
+<div class="flex gap-4 justify-between items-center">
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Fentezi</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Afsona</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Vester</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Musiqiy</button>
+  <button class="flex-1 max-w-[220px] text-gray-300 py-3"></button>
+</div>
+    </div>
+  </div>
+</div>
+
+<div id="year"
+     class="absolute left-1/2 -translate-x-1/2 mt-2 hidden w-full max-w-[1190px] bg-transparent z-40">
+  <div class="relative">
+    <div class="bg-[#161d25] rounded-md shadow-xl border border-[#24303a] px-6 py-5">
+      <!-- 1-qatordagi 5 ta tugma -->
+      <div class="flex gap-4 justify-between items-center mb-2">
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2025</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2024</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2023</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2022</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2021</button>
+</div>
+<div class="flex gap-4 justify-between items-center mb-2">
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2020</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2019</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2018</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2017</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2016</button>
+</div>
+<div class="flex gap-4 justify-between items-center mb-2">
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2015</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2014</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2013</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2012</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2011</button>
+</div>
+<div class="flex gap-4 justify-between items-center">
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">2010</button>
+  <button class="flex-1 max-w-[220px] text-gray-300 py-3"></button>
+  <button class="flex-1 max-w-[220px] text-gray-300 py-3"></button>
+  <button class="flex-1 max-w-[220px] text-gray-300 py-3"></button>
+  <button class="flex-1 max-w-[220px] text-gray-300 py-3"></button>
+</div>
+    </div>
+  </div>
+</div>
+
+
+<div id="country"
+     class="absolute left-1/2 -translate-x-1/2 mt-2 hidden w-full max-w-[1190px] bg-transparent z-40">
+  <div class="relative">
+    <div class="bg-[#161d25] rounded-md shadow-xl border border-[#24303a] px-6 py-5">
+      <!-- 1-qatordagi 5 ta tugma -->
+      <div class="flex gap-4 justify-between items-center mb-2">
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Rossiya</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">AQSH</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Turkiya</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Xitoy</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Hindiston</button>
+</div>
+<div class="flex gap-4 justify-between items-center mb-2">
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Avstraliya</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Buyuk Britaniya</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Janubiy Kareya</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Ukrainiya</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Qozog'iston</button>
+</div>
+<div class="flex gap-4 justify-between items-center mb-2">
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Fransiya</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Eron</button>
+  <button class="flex-1 max-w-[220px] bg-[#2d3b47] text-gray-300 py-3 rounded-md hover:bg-[#364452] transition">Yaponiya</button>
+  <button class="flex-1 max-w-[220px] text-gray-300 py-3"></button>
+  <button class="flex-1 max-w-[220px] text-gray-300 py-3"></button>
+</div>
+<div class="flex gap-4 justify-between items-center">
+  <button class="flex-1 max-w-[220px] text-gray-300 py-3"></button>
+  <button class="flex-1 max-w-[220px] text-gray-300 py-3"></button>
+  <button class="flex-1 max-w-[220px] text-gray-300 py-3"></button>
+  <button class="flex-1 max-w-[220px] text-gray-300 py-3"></button>
+  <button class="flex-1 max-w-[220px] text-gray-300 py-3"></button>
+</div>
+    </div>
+  </div>
+</div>
+
+        <div class="svipir1 bg-[#161d25]">
+            <div style="justify-content: space-between; scrollbar-width: none;cursor: grab;scroll-behavior: smooth;"
+                class="divv mx-auto w-[1190px] h-[80px] p-[10px] flex">
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2024-09-24/80x80_1727183278_9c824a4d18bfadc0ec1c.jpg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2024-12-07/80x80_1733587946_57f1e9bc93c72b28835d.jpg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2025-09-07/80x80_1757265093_56801e8445610b0eab71.jpg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2025-02-13/80x80_1739443476_3fb7e66e5a535993c315.jpg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2024-09-24/80x80_1727183984_e689fcb814e8ad8fbb6b.jpeg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2024-12-06/80x80_1733509837_3d9f01017a7c29feb6a7.jpg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2024-10-02/80x80_1727817375_f92148029811e6057a72.jpg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2025-05-29/80x80_1748521600_cecebcb1566fcc1fcc1b.jpg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2024-10-10/80x80_1728558045_541854ed2f68a866dbbf.jpg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2024-10-17/80x80_1729145004_43ef686b93935c6996c7.jpg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2025-05-17/80x80_1747488776_13b616dcbaf55d006937.jpg" alt="">
+                </div>
+                <div>
+
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2024-10-22/80x80_1729540613_9d56887bdd3ddf02e11e.jpg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2024-12-07/80x80_1733587698_2ba71293c3518a4d5ce9.jpg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2025-09-07/80x80_1757265049_7e3f6c1b58472caaef90.jpg" alt="">
+                </div>
+                <div>
+                    <img style="border: 3px solid #72757a;" class="rounded-[50%] w-[60px] h-[60px]"
+                        src="https://story.uzmovi.tv/2024-12-06/80x80_1733509894_f2acfd3854f6890725fc.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="section bg-[#131a20] min-h-[250px]">
+            <div class="reklama w-full pt-[10px]">
+                <div class="w-[1216px] mx-auto mb-4">
+                    <div class="flex justify-center gap-2 flex-wrap">
+                        <img src="https://storage.mds.yandex.net/get-bstor/17010131/c6589600-0c9f-4a24-ae9a-aaeb21829c02.jpeg"
+                            alt="" class="w-[728px] h-[90px]">
+                        <img src="https://storage.mds.yandex.net/get-bstor/16881530/9044a7b5-a2a6-46cd-bcbb-ba9fa35a8a3a.jpeg"
+                            alt="" class="w-[728px] h-[90px]">
+                        <img src="https://dcdn.veonadx.com/image-creatives/20251223-073958694a474ebf1f03.09471772.png"
+                            alt="" class="w-[728px] h-[90px]">
+                    </div>
+                </div>
+                <div class="w-[1216px] mx-auto p-4">
+                    <div class="flex justify-between items-center mb-5">
+                        <div class="flex gap-2">
+                          <a href="{% url 'login' %}">
+                            <button
+                                class="bg-gray-800 text-gray-400 border border-gray-600 px-5 py-2.5 rounded-md hover:bg-gray-700 hover:border-gray-500 transition-all flex items-center gap-2">
+                                <span><i class="bi bi-person-fill"></i></span>
+                                Kirish
+                            </button>
+                          </a>
+                            <a href="{% url 'register' %}">
+                              <button
+                                  class="bg-gray-800 text-gray-400 border border-gray-600 px-5 py-2.5 rounded-md hover:bg-gray-700 hover:border-gray-500 transition-all">
+                                  Ro'yxatdan o'tish
+                              </button>
+                            </a>
+                        </div>
+                        <div class="flex gap-2">
+                          <a href="{% url 'premyera' %}">
+                            <button
+                                class="bg-gray-800 text-gray-400 border border-gray-600 w-11 h-11 rounded-md hover:bg-gray-700 hover:border-gray-500 transition-all flex items-center justify-center"
+                                title="Yuklab olish">
+                                <i class="bi bi-fire"></i>
+                            </button>
+                          </a>
+                            <button
+                                class="bg-gray-800 text-gray-400 border border-gray-600 w-11 h-11 rounded-md hover:bg-gray-700 hover:border-gray-500 transition-all flex items-center justify-center"
+                                title="Video">
+                                <i class="bi bi-film"></i>
+                            </button>
+                            <a href="{% url 'aloqa' %}">
+                                <button
+                                    class="bg-gray-800 text-gray-400 border border-gray-600 w-11 h-11 rounded-md hover:bg-gray-700 hover:border-gray-500 transition-all flex items-center justify-center"
+                                    title="Ma'lumot">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </button>
+                            </a>
+                            <a href="{% url 'qoida' %}">
+                                <button
+                                    class="bg-gray-800 text-gray-400 border border-gray-600 w-11 h-11 rounded-md hover:bg-gray-700 hover:border-gray-500 transition-all flex items-center justify-center"
+                                    title="Xabar">
+                                    <i class="bi bi-exclamation-circle-fill"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <input type="text" placeholder="Qidirish..."
+                            class="w-full bg-gray-800 border border-gray-600 rounded-md px-5 py-3 text-gray-400 text-base outline-none focus:border-gray-500 focus:bg-gray-700 transition-all placeholder-gray-500" />
+                        <button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const images = [
+            "https://storage.mds.yandex.net/get-bstor/17010131/c6589600-0c9f-4a24-ae9a-aaeb21829c02.jpeg",
+            "https://storage.mds.yandex.net/get-bstor/16881530/9044a7b5-a2a6-46cd-bcbb-ba9fa35a8a3a.jpeg",
+            "https://dcdn.veonadx.com/image-creatives/20251223-073958694a474ebf1f03.09471772.png"
+        ];
+        const reklamaImgs = document.querySelectorAll('.reklama img');
+        let current = 0;
+        reklamaImgs.forEach((img, index) => {
+            img.style.display = (index === 0) ? 'block' : 'none';
+        });
+        setInterval(() => {
+            reklamaImgs[current].style.display = 'none';
+            current = (current + 1) % images.length;
+            reklamaImgs[current].src = images[current];
+            reklamaImgs[current].style.display = 'block';
+        }, 6000);
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('kinolar-toggle');
+      const panel = document.getElementById('kinolar-panel');
+
+      if (!toggle || !panel) return;
+
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        panel.classList.toggle('hidden');
+      });
+
+      panel.addEventListener('click', function (e) { e.stopPropagation(); });
+
+      document.addEventListener('click', function () {
+        if (!panel.classList.contains('hidden')) panel.classList.add('hidden');
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !panel.classList.contains('hidden')) {
+          panel.classList.add('hidden');
+        }
+      });
+    });
+
+     document.addEventListener('DOMContentLoaded', function () {
+      const janr = document.getElementById('janr');
+      const panel2 = document.getElementById('eps');
+
+      if (!janr || !panel2) return;
+
+      janr.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        panel2.classList.toggle('hidden');
+      });
+
+      panel2.addEventListener('click', function (e) { e.stopPropagation(); });
+
+      document.addEventListener('click', function () {
+        if (!panel2.classList.contains('hidden')) panel2.classList.add('hidden');
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !panel.classList.contains('hidden')) {
+          panel2.classList.add('hidden');
+        }
+      });
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const yil = document.getElementById('yil');
+      const panel3 = document.getElementById('year');
+
+      if (!yil || !panel3) return;
+
+      yil.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        panel3.classList.toggle('hidden');
+      });
+
+      panel2.addEventListener('click', function (e) { e.stopPropagation(); });
+
+      document.addEventListener('click', function () {
+        if (!panel3.classList.contains('hidden')) panel3.classList.add('hidden');
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !panel.classList.contains('hidden')) {
+          panel3.classList.add('hidden');
+        }
+      });
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const davlat = document.getElementById('davlat');
+      const panel4 = document.getElementById('country');
+
+      if (!davlat || !panel4) return;
+
+      davlat.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        panel4.classList.toggle('hidden');
+      });
+
+      panel2.addEventListener('click', function (e) { e.stopPropagation(); });
+
+      document.addEventListener('click', function () {
+        if (!panel4.classList.contains('hidden')) panel4.classList.add('hidden');
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !panel.classList.contains('hidden')) {
+          panel4.classList.add('hidden');
+        }
+      });
+    });
+
+    </script>
+</body>
+
+</html>

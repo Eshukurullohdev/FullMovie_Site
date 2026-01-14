@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+    <div class="w-[100%] h-[550px] bg-[#161d25]">
+        <form action="" class="w-[400px] h-[450px] m-auto text-[#a5bbdc] pt-[50px]">
+            <span class="text-[24px] ml-[110px] pb-[20px]">Tizimga kirish</span>
+            <div class="mt-[20px]">
+                <span class="i bg-[#28313e] w-[40px] h-[40px] p-[10px]"><i class="fa-solid fa-user"></i></span>
+                <input class="input w-[340px] h-[40px] bg-[#28313e] text-[12px]" type="text"
+                    placeholder="    Login yoki email manzil">
+            </div>
+            <div>
+                <span class="i bg-[#28313e] w-[40px] h-[40px] p-[10px]"><i class="fa-solid fa-key"></i></span>
+                <input class="input w-[340px] h-[40px] bg-[#28313e] text-[12px] text-[#a5bbdc] mb-[10px]" type="text"
+                    placeholder="    Parol">
+            </div>
+            <div class="w-[400px] flex justify-between text-[12px] mb-[5px]">
+                <span class="items-center "><input type="checkbox"> Eslab qolish</span>
+                <a class="text-[#bdd7fc]" href="#">Parolni tiklash</a>
+            </div>
+            <input
+                class="submit w-[400px] h-[40px] rounded-[5px] text-[#fff] text-[#a5bbdc] mb-[10px] bg-[#638b34] uppercase"
+                type="submit" value="Kirish">
+            <span class="akk text-[12px] ml-[90px] inline mt-[20px] mb-[20px]">Akkauntingiz yo‘qmi? <a
+                    href="#">Ro‘yxatdan o‘tish</a></span>
+            <div class="flex justify-between items-center">
+                <div class="right hr w-[170px] h-[5px]"></div>
+                <span class="text-[#a5bbdc] text-[12px] font-semibold">YOKI</span>
+                <div class="left hr w-[170px] h-[5px]"></div>
+            </div>
+            <div class="flex justify-between items-center mt-[10px]">
+                <span class="google one bg-[#0c77ce] text-[#fff] uppercase text-[12px] rounded-[3px]"> <i
+                        class="fa-brands fa-google mr-[10px] text-[16px]"></i>
+                    google</span>
+                <span class="telegram one bg-[#2195f5] text-[#fff] uppercase text-[12px] rounded-[3px]"> <i
+                        class="fa-brands fa-telegram mr-[10px] text-[16px]"></i> telegram</span>
+            </div>
+        </form>
+    </div>
+    <style>
+        .footer {
+            background-color: rgb(37, 40, 54);
+        }
+
+        .atg a {
+            border: 1px solid #293644;
+        }
+
+        .input {
+            margin-bottom: 10px;
+            border-radius: 0px 5px 5px 0px;
+            border: none;
+        }
+
+        .hr {
+            border-top: 1px solid #a5bbdc;
+            border-bottom: 1px solid #a5bbdc;
+        }
+
+        .one {
+            padding: 10px 50px;
+        }
+
+        a {
+            transition: 0.5s all ease;
+        }
+
+
+        a:hover {
+            font-weight: 600;
+            transition: 0.5s all ease;
+        }
+    </style>
+</body>
+{% endblock %}

@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<body class="bg-gray-900 text-gray-100">
+    <div class="p-4 md:p-8 flex items-center justify-center">
+        <div class="w-[872px]">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center">
+                    <div class="w-1 h-12 bg-cyan-500 mr-4"></div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-white">BARAMULLA (PREMYERA)</h1>
+                </div>
+                <button
+                    class="w-12 h-12 bg-cyan-500 hover:bg-cyan-600 flex items-center justify-center transition-colors">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-6 md:p-8">
+
+                    <div class="lg:col-span-1">
+                        <div
+                            class="bg-gray-700  overflow-hidden shadow-lg aspect-[2/3] flex items-center justify-center">
+                            <img style="border: 2px solid #e5e7eb6f;" src="{{ kino.main_banner.url }}" alt=""
+                                width="248px" height="368px">
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="flex items-start border-b border-gray-700 pb-4">
+                                <div class="w-32 flex-shrink-0">
+                                    <span class="text-gray-400 font-medium text-[10px]">NOMI</span>
+                                </div>
+                                <div class="flex-1">
+                                    <span class="text-gray-300 text-[14px]">{{ kino.nomi }}</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start border-b border-gray-700 pb-4">
+                                <div class="w-32 flex-shrink-0">
+                                    <span class="text-gray-400 font-medium text-[10px]">JANR</span>
+                                </div>
+                                <div class="flex-1">
+                                    <span class="text-gray-300 text-[14px]">Tarjima kinotar {{ kino.janr }}</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start border-b border-gray-700 pb-4">
+                                <div class="w-32 flex-shrink-0">
+                                    <span class="text-gray-400 font-medium text-[10px]">DAVLATI</span>
+                                </div>
+                                <div class="flex-1">
+                                    <span class="text-cyan-400 font-medium text-[14px]">{{ kino.davlat }}</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start border-b border-gray-700 pb-4">
+                                <div class="w-32 flex-shrink-0">
+                                    <span class="text-gray-400 font-medium text-[10px]">YILI</span>
+                                </div>
+                                <div class="flex-1">
+                                    <span class="text-gray-300 text-[14px]">{{ kino.yili }}</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start border-b border-gray-700 pb-4">
+                                <div class="w-32 flex-shrink-0">
+                                    <span class="text-gray-400 font-medium text-[10px]">TILI</span>
+                                </div>
+                                <div class="flex-1">
+                                    <span class="text-gray-300 text-[14px]">O'zbek</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start border-b border-gray-700 pb-4">
+                                <div class="w-32 flex-shrink-0">
+                                    <span class="text-gray-400 font-medium text-[10px]">DAVOMIYLIGI</span>
+                                </div>
+                                <div class="flex-1">
+                                    <span class="text-gray-300 text-[14px]">{{ kino.davomiy }}</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start pb-4">
+                                <div class="w-32 flex-shrink-0">
+                                    <span class="text-gray-400 font-medium text-[10px]">YOSH CHEGARASI</span>
+                                </div>
+                                <div class="flex-1">
+                                    <span
+                                        class="bg-red-600 text-white p-[5px] rounded-[50%] font-bold text-[14px]">16+</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center w-[50px] m-[140px]">
+                            <i class="bi bi-hand-thumbs-down text-[18px] text-[#2ecc71]"></i>
+                            <span class="bg-[#222933] mr-[10px] ml-[10px]">+33</span>
+                            <i class="bi bi-hand-thumbs-up text-[red] text-[18px]"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <body class="bg-[#0b1220]">
+        <div class="w-[872px] h-[120px] mx-auto mt-10 bg-[#24303d] p-6 relative">
+            <div style="font-weight: 400;" class="w-[792px] mt-[10px] ml-[20px]">
+                <p class="text-[#a5bbdc] text-[15px]">
+                    Vellington-on-Si shaharchasi aholisi uchun unutilmas Rojdestvo boshlanadi:
+                    tarixdagi eng kuchli qor bo‘roni barcha rejalarni, jumladan Santaning
+                    rejalarini ham butkul o‘zgartirib yuboradi.
+                </p>
+            </div>
+        </div>
+
+        <div class="w-[872px] mx-auto mt-4 flex gap-3">
+            <button class="bg-[#2a3c52] text-[#a5bbdc] text-[11px] px-6 py-2 hover:bg-[#36506e]">
+                ONLAYN KO‘RISH
+            </button>
+            <button class="bg-[#2a3c52] text-[#a5bbdc] text-[11px] px-6 py-2 hover:bg-[#36506e]">
+                TREYLER
+            </button>
+            <button
+                class="bg-[#2a3c52] text-[#a5bbdc] text-[11px] px-5 py-4 hover:bg-[#36506e] flex items-center gap-2">
+                <i class="bi bi-telegram"></i>TELEGRAM ORQALI YUKLASH
+            </button>
+        </div>
+
+        <div class="w-[872px] h-[365] mx-auto relative overflow-hidden">
+            <div class="w-[872px] h-[400px] bg-[#000]">
+                <div class="relative w-[872px] cursor-pointer" id="videoContainer">
+                    <img src="https://uzmovi.tv/images/fordok-min.jpg?v=1.16.6" alt="Preview Image" class="block w-full"
+                        id="previewImage">
+                    <video id="video" class="hidden w-full" controls autoplay>
+                        <source src="videooo.mp4" type="video/mp4">
+                        Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
+                    </video>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+        <div class="w-[872px] mx-auto px-4 py-6">
+            <div class="flex items-center justify-between mb-6">
+                <button style="font-weight: 700;"
+                    class="flex items-center text-[#99b1d4] gap-2 bg-[#1f2c3a] px-6 py-3 rounded-md text-[12px] hover:bg-[#2a3b4d]">
+                    <i class="fa-solid fa-info"></i>IZOH QOLDIRISH
+                </button>
+
+                <div class="flex gap-2">
+                    <div class="w-[24px] h-[24px] bg-blue-500 rounded"></div>
+                    <div class="w-[24px] h-[24px] bg-sky-400 rounded"></div>
+                    <div class="w-[24px] h-[24px] bg-orange-500 rounded"></div>
+                    <div class="w-[24px] h-[24px] bg-red-500 rounded"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+                <div class="bg-[#1b2a38] overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.uzmovi.tv/2026-01-07/f798dacab579c02b1ab5bc3a8d92aa11.jpg" alt=""
+                            class="w-[182px] h-[250px] object-cover">
+                    </div>
+                    <div class="p-3 text-sm text-gray-300 text-center text-[#99b1d4]">
+                        O'sha Yangi yil / Rojdestvo (multfilm, premyera)
+                    </div>
+                </div>
+
+                <div class="bg-[#1b2a38] overflow-hidden">
+                    <img src="https://images.uzmovi.tv/2026-01-07/17d37ab3f9014c7aab6fed4b7626b74d.jpg" alt=""
+                        class="w-[182px] h-[250px] object-cover">
+                    <div class="p-3 text-sm text-gray-300 text-center text-[#99b1d4] ">
+                        Bir gal Yangi yilda
+                    </div>
+                </div>
+
+                <div class="bg-[#1b2a38] overflow-hidden">
+                    <img src="https://images.uzmovi.tv/2026-01-06/07751b6b658fe09c4051d99e78f44d71.jpg" alt=""
+                        class="w-[182px] h-[250px] object-cover">
+                    <div class="p-3 text-sm text-gray-300 text-center text-[#99b1d4]">
+                        Uyda yolg'iz qizaloq (premyera)
+                    </div>
+                </div>
+
+                <div class="bg-[#1b2a38] overflow-hidden">
+                    <img src="https://images.uzmovi.tv/2026-01-06/1fdefdb0fe9150d588a67f4dd6934d91.jpg" alt=""
+                        class="w-[182px] h-[250px] object-cover">
+                    <div class="p-3 text-sm text-gray-300 text-center text-[#99b1d4]">
+                        Qiz bola do'st (premyera)
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <script>
+            const container = document.getElementById('videoContainer');
+            const img = document.getElementById('previewImage');
+            const video = document.getElementById('video');
+
+
+            container.addEventListener('click', () => {
+                img.classList.add('hidden');
+                video.classList.remove('hidden');
+                video.play();
+            });
+        </script>
+
+
+    </body>
+
+</body>
+
+</html>
+
+
+{% endblock %}
