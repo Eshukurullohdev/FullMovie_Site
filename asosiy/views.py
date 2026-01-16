@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Main_Movie
+from .models import Main_Movie, Purchase_Movie
+
 def base(request):
     return render(request, "base.html")
 
@@ -30,7 +31,8 @@ def qoida(request):
     return render(request, "qoida.html")
 
 def premyera(request):
-    return render(request, "premyera.html")
+    kino_purchase = Purchase_Movie.objects.all()
+    return render(request, "premyera.html", {"kino_purchase": kino_purchase})
 
 # movie_id == id
 # id == 1

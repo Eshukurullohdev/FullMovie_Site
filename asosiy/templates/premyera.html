@@ -5,36 +5,16 @@
     <div>
         <h1 class="text-[#a5bbdc] text-[26px] mb-[30px]">Eksklyuziv filmlar</h1>
         <div class="flex gap-6 flex-wrap">
-            <div class="w-[193px] text-center justify-center items-center bg-[#222933]">
-                <img class="w-[193px] h-[270px]"
-                    src="https://images.uzmovi.tv/2025-11-18/6668ade8942f4e3dd635b6283fce5d59.jpg" alt="">
-                <a class="text-[13px] text-[#a5bbdc]" href="">Ko'plar orasidan / Pluribus (yangi serial, barcha
-                    qismlari,…)</a>
+            {% for kino_purchase in kino_purchase %}
+            <div class="w-[193px] text-center justify-center items-center bg-[#222933] relative">
+                {% if kino_purchase.is_premium %}
+                <button class="bg-[#8BC34A] text-white absolute right-[0px] p-[5px] rounded-[5px]"><i class="bi bi-star-fill text-white"></i> Premium</button>
+                {% endif %}
+                <img class="w-[193px] h-[270px] object-cover"
+                    src="{{ kino_purchase.main_banner_purchase.url }}" alt="">
+                <a class="text-[13px] text-[#a5bbdc]" href="">{{ kino_purchase.nomi_purchase }}</a>
             </div>
-            <div class="w-[193px] text-center justify-center items-center bg-[#222933]">
-                <img class="w-[193px] h-[270px]"
-                    src="https://images.uzmovi.tv/2025-11-18/6668ade8942f4e3dd635b6283fce5d59.jpg" alt="">
-                <a class="text-[13px] text-[#a5bbdc]" href="">Ko'plar orasidan / Pluribus (yangi serial, barcha
-                    qismlari,…)</a>
-            </div>
-            <div class="w-[193px] text-center justify-center items-center bg-[#222933]">
-                <img class="w-[193px] h-[270px]"
-                    src="https://images.uzmovi.tv/2025-11-18/6668ade8942f4e3dd635b6283fce5d59.jpg" alt="">
-                <a class="text-[13px] text-[#a5bbdc]" href="">Ko'plar orasidan / Pluribus (yangi serial, barcha
-                    qismlari,…)</a>
-            </div>
-            <div class="w-[193px] text-center justify-center items-center bg-[#222933]">
-                <img class="w-[193px] h-[270px]"
-                    src="https://images.uzmovi.tv/2025-11-18/6668ade8942f4e3dd635b6283fce5d59.jpg" alt="">
-                <a class="text-[13px] text-[#a5bbdc]" href="">Ko'plar orasidan / Pluribus (yangi serial, barcha
-                    qismlari,…)</a>
-            </div>
-            <div class="w-[193px] text-center justify-center items-center bg-[#222933]">
-                <img class="w-[193px] h-[270px]"
-                    src="https://images.uzmovi.tv/2025-11-18/6668ade8942f4e3dd635b6283fce5d59.jpg" alt="">
-                <a class="text-[13px] text-[#a5bbdc]" href="">Ko'plar orasidan / Pluribus (yangi serial, barcha
-                    qismlari,…)</a>
-            </div>
+            {% endfor %}
         </div>
     </div>
     <div class="warapper">

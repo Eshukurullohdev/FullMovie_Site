@@ -15,4 +15,17 @@ class Main_Movie(models.Model):
         return self.nomi
     
     
-# OOP 
+    
+class Purchase_Movie(models.Model):
+    main_banner_purchase = models.ImageField(upload_to='media/')
+    nomi_purchase = models.CharField(max_length=50)
+    janr_purchase = models.CharField(max_length=50)
+    davlat_purchase = models.CharField(max_length=50)
+    yili_purchase = models.IntegerField()
+    davomiy_purchase = models.CharField(max_length=50)
+    tavsifi_purchase = models.TextField()
+    video_img_purchase = models.ImageField(upload_to='media/', null=True)
+    is_premium = models.BooleanField(null=True)
+    
+    def __str__(self):
+        return self.nomi_purchase
