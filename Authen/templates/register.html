@@ -6,46 +6,48 @@
     <div class="w-full flex flex-col items-center text-center pt-10">
 
         <h1 class="text-2xl font-semibold mb-6">Ro'yxatdan o'tish</h1>
-
-        <div class="flex items-center w-[380px] mb-3">
-            <span class="bg-[#333d4d] border border-[#313842] px-3 py-3 rounded-l text-sm font-semibold">
-                <i class="fa fa-envelope"></i>
-            </span>
-            <input
-                type="email"
-                placeholder="Email Manzil"
-                class="w-full  h-11 bg-[#28313e] border border-[#313842] rounded-r px-3 text-sm outline-none"
-            >
-        </div>
-
-     
-        <div class="flex items-center w-[380px] mb-3">
-            <span class="bg-[#333d4d] border border-[#313842] px-3 py-3 rounded-l text-sm font-semibold">
-                <i class="fa fa-user"></i>
-            </span>
-            <input type="text" placeholder="Login" class="w-full h-11 bg-[#28313e] border border-[#313842] rounded-r px-3 text-sm outline-none">
-        </div>
-
-        <div class="flex items-center w-[380px] mb-3">
-            <span class="bg-[#333d4d] border border-[#313842] px-3 py-3 rounded-l text-sm font-semibold">
-                <i class="fa fa-lock"></i>
-            </span>
-            <input
-                type="password"
-                placeholder="Parol"
-                class="w-full  h-11 bg-[#28313e] border border-[#313842] rounded-r px-3 text-sm outline-none">
-        </div>
-
-        <div class="flex items-center w-[380px] mb-4">
-            <span class="bg-[#333d4d] border border-[#313842] px-3 py-3 rounded-l text-sm font-semibold">
-                <i class="fa fa-legal"></i>
-            </span>
-            <input
-                type="password"
-                placeholder="Parolni tasdiqlash"
-                class="w-full  h-11 bg-[#28313e] border border-[#313842] rounded-r px-3 text-sm outline-none"
-            >
-        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="flex items-center w-[380px] mb-3">
+                <span class="bg-[#333d4d] border border-[#313842] px-3 py-3 rounded-l text-sm font-semibold">
+                    <i class="fa fa-envelope"></i>
+                </span>
+                <input
+                    type="username"
+                    placeholder="username"
+                    class="w-full  h-11 bg-[#28313e] border border-[#313842] rounded-r px-3 text-sm outline-none" name="username"
+                >
+            </div>
+    
+    
+            <div class="flex items-center w-[380px] mb-3">
+                <span class="bg-[#333d4d] border border-[#313842] px-3 py-3 rounded-l text-sm font-semibold">
+                    <i class="fa fa-user"></i>
+                </span>
+                <input type="email" placeholder="email" class="w-full h-11 bg-[#28313e] border border-[#313842] rounded-r px-3 text-sm outline-none" name="email"> 
+            </div>
+    
+            <div class="flex items-center w-[380px] mb-3">
+                <span class="bg-[#333d4d] border border-[#313842] px-3 py-3 rounded-l text-sm font-semibold">
+                    <i class="fa fa-lock"></i>
+                </span>
+                <input
+                    type="password"
+                    placeholder="password"
+                    class="w-full  h-11 bg-[#28313e] border border-[#313842] rounded-r px-3 text-sm outline-none" name="password">
+            </div>
+    
+            <div class="flex items-center w-[380px] mb-4">
+                <span class="bg-[#333d4d] border border-[#313842] px-3 py-3 rounded-l text-sm font-semibold">
+                    <i class="fa fa-legal"></i>
+                </span>
+                <input
+                    type="password"
+                    placeholder="Parolni tasdiqlash"
+                    class="w-full  h-11 bg-[#28313e] border border-[#313842] rounded-r px-3 text-sm outline-none" name="parolni_tasdiqlash"
+                >
+            </div>
+        
 
         <div class="flex items-center gap-2 mb-4">
             <input type="checkbox" class="w-[13px] h-[13px]">
@@ -55,14 +57,14 @@
         </div>
 
 
-        <button class="w-[450px] h-[34px] bg-[#638b34] border border-[#638b34] rounded text-[#a5bbdc] text-base mb-2 hover:opacity-90">
+        <button type="submit" class="w-[380px] h-[34px] bg-[#638b34] border border-[#638b34] rounded text-[#a5bbdc] text-base mb-2 hover:opacity-90">
             DAVOM ETISH
         </button>
-
+        </form>
 
         <p class="text-sm text-gray-400 mt-3">
             Allaqachon ochilgan akauntingiz mavjudmi?
-            <a href="#" class="text-blue-500 hover:underline">Kirish</a>
+            <a href="{% url 'login' %}" class="text-blue-500 hover:underline">Kirish</a>
         </p>
 
 
