@@ -4,25 +4,24 @@
 
 <body>
     <div class="w-[100%] h-[550px] bg-[#161d25]">
-        <form action="" class="w-[400px] h-[450px] m-auto text-[#a5bbdc] pt-[50px]">
+        <form method="post" class="w-[400px] h-[450px] m-auto text-[#a5bbdc] pt-[50px]">
+            {% csrf_token %}
             <span class="text-[24px] ml-[110px] pb-[20px]">Tizimga kirish</span>
             <div class="mt-[20px]">
                 <span class="i bg-[#28313e] w-[40px] h-[40px] p-[10px]"><i class="fa-solid fa-user"></i></span>
                 <input class="input w-[340px] h-[40px] bg-[#28313e] text-[12px]" type="text"
-                    placeholder="    Login yoki email manzil">
+                    placeholder="username" name="username">
             </div>
             <div>
                 <span class="i bg-[#28313e] w-[40px] h-[40px] p-[10px]"><i class="fa-solid fa-key"></i></span>
                 <input class="input w-[340px] h-[40px] bg-[#28313e] text-[12px] text-[#a5bbdc] mb-[10px]" type="text"
-                    placeholder="    Parol">
+                    placeholder="Parol" name="password">
             </div>
             <div class="w-[400px] flex justify-between text-[12px] mb-[5px]">
                 <span class="items-center "><input type="checkbox"> Eslab qolish</span>
                 <a class="text-[#bdd7fc]" href="#">Parolni tiklash</a>
             </div>
-            <input
-                class="submit w-[400px] h-[40px] rounded-[5px] text-[#fff] text-[#a5bbdc] mb-[10px] bg-[#638b34] uppercase"
-                type="submit" value="Kirish">
+            <button  class="submit w-[400px] h-[40px] rounded-[5px] text-[#fff] text-[#a5bbdc] mb-[10px] bg-[#638b34] uppercase" type="submit">Kirish</button>
             <span class="akk text-[12px] ml-[90px] inline mt-[20px] mb-[20px]">Akkauntingiz yo‘qmi? <a
                     href="{% url 'register' %}">Ro‘yxatdan o‘tish</a></span>
             <div class="flex justify-between items-center">
