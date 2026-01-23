@@ -64,14 +64,7 @@ def login(request):
                     return redirect("login")
         except User.DoesNotExist:
             logger.warning({username},"login qilishda  xato bor")
-            return redirect("login")
-                
-                
-            
-        
-        
-        
-        
+            return redirect("login") 
     return render(request, "login.html")
 
 

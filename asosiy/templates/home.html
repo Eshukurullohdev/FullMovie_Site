@@ -3,6 +3,118 @@
 {% block content %}
 
 <div class="w-[100%] h-auto bg-[#161D25]">
+     <style>
+    .slayder-quti {
+      width: 100%;
+      height: 480px;
+      border-radius: 4px;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .premyera-sarlavha {
+      border-left: 3px solid #5b21b6;
+      padding-left: 12px;
+      cursor: pointer;
+    }
+
+    .premyera-sarlavha h2 {
+      color: #94a3b8;
+      transition: color 0.3s ease;
+    }
+
+    .premyera-sarlavha:hover h2 {
+      color: #ffffff;
+    }
+
+    .kino-nomi-qora-fon {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px 0;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #94a3b8;
+    }
+  </style>
+</head>
+
+<body class="bg-[#0f172a] p-10 font-sans">
+
+  <div class="max-w-5xl mx-auto">
+
+    <div class="mb-5 w-fit">
+      <div class="premyera-sarlavha">
+        <h2 class="text-sm font-bold tracking-[0.2em] uppercase">
+          Premyeralar
+        </h2>
+      </div>
+    </div>
+
+    <div class="swiper premyera-slider slayder-quti overflow-hidden">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide relative">
+          <img src="https://images.uzmovi.tv/2025-12-23/e0f001176a07e468e4d3c083f2694b10.jpg" />
+          <div class="kino-nomi-qora-fon">
+            <p class="text-white text-xl font-medium px-4">
+              Fallout (2-mavsum / fasl, o'zbek tilida)
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide relative">
+          <img src="https://images.uzmovi.tv/2025-12-19/5140f8879d9db843dc1d6ed9e4d994c1.jpg" />
+          <div class="kino-nomi-qora-fon">
+            <p class="text-white text-xl px-4">
+              Ko'chalar ovozi (premyera)
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide relative">
+          <img src="https://images.uzmovi.tv/2025-12-20/245cad97cb77c80869727985ec54ba3d.jpg" />
+          <div class="kino-nomi-qora-fon">
+            <p class="text-white text-xl px-4">
+              Avatar 3: Olov va kul
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    new Swiper(".premyera-slider", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
     <div class="container flex  justify-center  mx-auto">
         <div>
             <style>
