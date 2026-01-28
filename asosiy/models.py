@@ -27,5 +27,25 @@ class Purchase_Movie(models.Model):
     video_img_purchase = models.ImageField(upload_to='media/', null=True)
     is_premium = models.BooleanField(null=True)
     
+    
+    
     def __str__(self):
         return self.nomi_purchase
+    
+    
+
+class IshTuri(models.Model):
+    ish_turi = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.ish_turi
+    
+    
+class AsosiyIsh(models.Model):
+    ish_nomi = models.CharField(max_length=100)
+    ish_soati = models.IntegerField()
+    ish_turi = models.ForeignKey(IshTuri, on_delete=models.CASCADE)
+
+
+    def __str__(self):
+        return self.ish_nomi

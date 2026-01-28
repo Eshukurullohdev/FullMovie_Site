@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Faqat Shifokorlar ishi</h1>
+
+{% for ishlar in ishlar %}
+<h1>{{ ishlar.ish_turi }}</h1>
+<h2>{{ ishlar.ish_soati }}</h2>
+<h3>{{ ishlar.ish_nomi }}</h3>
+{% endfor %}
+
+{% endblock %}

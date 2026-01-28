@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<h1>Faqat oqutuvchilar Ishi</h1>
+
+{% for ishlar in ishlar %}
+<h2>{{ ishlar.ish_nomi }}</h2>
+<h3>{{ ishlar.ish_soati }}</h3>
+<h4>{{ ishlar.ish_turi }}</h4>
+
+{% endfor %}
+
+{% endblock %}

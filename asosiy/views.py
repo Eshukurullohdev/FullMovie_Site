@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Main_Movie, Purchase_Movie
+from .models import Main_Movie, Purchase_Movie, IshTuri, AsosiyIsh
 
 def base(request):
     return render(request, "base.html")
@@ -33,6 +33,15 @@ def qoida(request):
 def premyera(request):
     kino_purchase = Purchase_Movie.objects.all()
     return render(request, "premyera.html", {"kino_purchase": kino_purchase})
+
+
+def work(request):
+    ishlar = AsosiyIsh.objects.filter(ish_turi__ish_turi="Shifokor")
+    return render(request, "ish.html", {"ishlar": ishlar})
+    
+def work_second(request):
+    ishlar = AsosiyIsh.objects.filter(ish_turi__ish_turi="Usta")
+    return render(request, "ish_second.html", {"ishlar": ishlar})
 
 # movie_id == id
 # id == 1
