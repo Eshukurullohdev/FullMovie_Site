@@ -53,3 +53,32 @@ def work_second(request):
 # relative
 # models
 # get_object_or_404
+
+
+# domenlar
+# .uz --- uzbek
+# .ru --- rus
+# .in -- hind
+# .com --- ommaviy
+
+# serverlar
+# railway
+# heroku --- (free)
+# pythonanywhere --- (free)
+# digitalocean
+# aws
+# render  --- (free)
+# hetzner
+
+
+# frontend --- netlify, vercel
+
+
+
+# backend
+
+
+
+# linux
+
+# gunicorm
